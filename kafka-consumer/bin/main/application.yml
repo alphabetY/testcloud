@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: 127.0.0.1:9092
+      bindings:
+        message-in:
+          group: group-0
+          destination: test
+          contentType: application/json
